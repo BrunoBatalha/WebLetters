@@ -1,0 +1,90 @@
+:root {
+    --azul-1: #373B46;
+    --azul-2: #445060;
+    --amarelo: #FFFDF0;
+    --dourado: #E1D284;
+    --cinza: #E5E5E5;
+    --vermelho: #BC5854;
+}
+
+* {
+    font-family: "Courier New", Courier, monospace;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("../img/fundo-geral.jpg");
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.header abbr {
+    color: var(--amarelo);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header abbr::before {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 30px;
+    background: var(--amarelo);
+    margin-right: 7px;
+    vertical-align: middle;
+}
+
+.header abbr::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 30px;
+    background: var(--amarelo);
+    margin-left: 7px;
+    vertical-align: middle;
+}
+
+.titulo {
+    color: var(--amarelo);
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.quebra-secao {
+    background: var(--dourado);
+    color: var(--dourado);
+    display: block;
+    height: 5px;
+}
+
+.btn {
+    border: none;
+    background: var(--vermelho);
+    cursor: pointer;
+    color: var(--amarelo);
+    font-size: 30px;
+    width: 200px;
+    height: 50px;
+    transition: background 200ms;
+}
+.btn:hover{
+    background: none;
+    border: 2px solid var(--vermelho);
+    /* color: var(--vermelho); */
+}

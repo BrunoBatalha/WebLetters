@@ -2,7 +2,50 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-    <title>Web Letter - Uma carta mil emoções</title>
+    <title>Web Letters - Uma carta mil emoções</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
-  <body></body>
+
+  <body>
+    <div class="introducao">
+      <header class="header">
+        <abbr title="Web Letters">W.L</abbr>
+      </header>
+
+      <section>
+        <div class="container">
+          <h1 class="titulo-principal">Web Letters</h1>
+          <p class="descricao">
+            Faça de sua carta uma verdadeira experiência...
+          </p>
+          <blockquote class="quote">
+            <p>
+              "Ainda que não possa vê-lo ou tocá-lo, é como se estivesse ao meu
+              lado."
+            </p>
+            <cite>Violet Evergarden</cite>
+          </blockquote>
+        </div>
+      </section>
+    </div>
+
+    <hr class="quebra-secao" />
+
+    <section class="form-carta container">
+      <h2 class="titulo">Apenas escreva</h2>
+      <form>
+        <label for="remetente">De:</label>
+        <input type="text" name="remetente" />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea type="text" name="mensagem"></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+
+    <hr class="quebra-secao container" />
+  </body>
 </html>
