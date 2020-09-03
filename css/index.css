@@ -53,7 +53,7 @@
 /* Formulário carta */
 
 .form-carta {
-    margin-top: 90px;
+    padding: 90px 0 50px 0;
 }
 
 .form-carta form {
@@ -63,7 +63,7 @@
 
 .form-carta form label {
     color: var(--amarelo);
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1em;
     margin-bottom: 8px;
 }
@@ -88,5 +88,42 @@
 }
 
 .form-carta form button {
-   margin: 0 auto 50px auto;
+   margin: 0 auto;
 }
+
+
+/* Cartas */
+.cartas {
+    padding: 90px 0 50px 0;
+}
+
+.cartas .lista-cartas {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cartas .lista-cartas .item-carta{
+    width: 460px;
+    margin-bottom: 20px;
+}
+.cartas .lista-cartas .item-carta p{
+    color: var(--amarelo);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.cartas .lista-cartas .item-carta img{
+    max-width: 100%;
+}
+
+.cartas a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 7px;
+    margin: 20px auto 0 auto;
+}
+/* .cartas a button{
+    margin: 0 auto;
+    text-decoration: none !important;
+} */
