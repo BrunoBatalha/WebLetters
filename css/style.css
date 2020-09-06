@@ -23,12 +23,16 @@ body {
     margin: 0 auto;
 }
 
-.header {
+.header, .footer {
     text-align: center;
-    padding-top: 20px;
+    padding: 20px 0;
 }
 
-.header abbr {
+.footer {
+    background: var(--azul-1);
+}
+
+.marca {
     color: var(--amarelo);
     font-size: 24px;
     font-weight: bold;
@@ -36,7 +40,7 @@ body {
     text-transform: uppercase;
 }
 
-.header abbr::before {
+.marca::before {
     content: "";
     display: inline-block;
     height: 2px;
@@ -46,7 +50,7 @@ body {
     vertical-align: middle;
 }
 
-.header abbr::after {
+.marca::after {
     content: "";
     display: inline-block;
     height: 2px;
@@ -83,8 +87,32 @@ body {
     height: 50px;
     transition: background 200ms;
 }
-.btn:hover{
+
+.btn:hover {
     background: none;
     outline: 2px solid var(--vermelho);
     /* color: var(--vermelho); */
+}
+
+.quote-footer {
+    background-size: cover;
+    height: 400px;
+    margin-top: 100px;
+}
+
+.quote-footer blockquote {
+    font-size: 24px;
+    width: 535px;
+    padding-top: 130px;
+}
+
+.quote-footer blockquote p {
+    font-style: italic;
+}
+
+.quote-footer blockquote cite {
+    display: block;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 15px;
 }
