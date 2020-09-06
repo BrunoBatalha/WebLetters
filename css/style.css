@@ -32,7 +32,7 @@ body {
     background: var(--azul-1);
 }
 
-.marca {
+.marca, .marca abbr {
     color: var(--amarelo);
     font-size: 24px;
     font-weight: bold;
@@ -95,10 +95,11 @@ body {
 }
 
 .quote-footer {
+    background-size: cover;
+    color: var(--amarelo);
     height: 400px;
     margin-top: 100px;
 }
-
 
 .quote-footer blockquote {
     font-size: 24px;
@@ -115,4 +116,13 @@ body {
     font-weight: bold;
     text-align: right;
     margin-top: 15px;
+}
+
+.item-carta img{
+    cursor: pointer;
+    transition: transform 200ms, box-shadow 200ms;
+}
+.item-carta:hover img {
+    box-shadow: 0 -5px 5px rgb(0, 0, 0, .2);
+    transform: translate3d(0, 5px, 0);
 }
