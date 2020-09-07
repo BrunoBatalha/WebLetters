@@ -126,7 +126,7 @@
     max-width: 100%;
 }
 
-.cartas a {
+.cartas .btn {
     display: block;
     text-align: center;
     text-decoration: none;
