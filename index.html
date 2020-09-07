@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Web Letters - Uma carta mil emoções</title>
-
+    <link rel="shortcut icon" href="img/carta.svg" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/up-arrow-button.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -38,12 +38,17 @@
 
     <section class="form-carta container">
       <h2 class="titulo">Apenas escreva</h2>
-      <form>
+      <form id="form-envia-carta" method="POST">
         <label for="remetente">De:</label>
-        <input type="text" name="remetente" autocomplete="off" />
+        <input type="text" name="remetente" autocomplete="off" required />
 
         <label for="mensagem">Mensagem:</label>
-        <textarea type="text" name="mensagem" autocomplete="off"></textarea>
+        <textarea
+          type="text"
+          name="mensagem"
+          autocomplete="off"
+          required
+        ></textarea>
 
         <button type="submit" class="btn">Enviar</button>
       </form>
@@ -53,31 +58,7 @@
 
     <section class="cartas container">
       <h2 class="titulo">Cartas</h2>
-      <ul class="lista-cartas">
-        <li class="item-carta">
-          <p class="remetente">De: Bruno Batalha</p>
-          <a href="carta.html"><img src="img/carta.svg" alt="Carta de " /> </a>
-        </li>
-        <li class="item-carta">
-          <p class="remetente">De: Bruno Batalha</p>
-          <img src="img/carta.svg" alt="Carta de " />
-        </li>
-        <li class="item-carta">
-          <p class="remetente">De: Bruno Batalha</p>
-          <img src="img/carta.svg" alt="Carta de " />
-        </li>
-        <li class="item-carta">
-          <p class="remetente">De: Bruno Batalha</p>
-          <img src="img/carta.svg" alt="Carta de " />
-        </li>
-        <li class="item-carta">
-          <p class="remetente">De: Bruno Batalha</p>
-          <img src="img/carta.svg" alt="Carta de " />
-        </li>
-        <li class="item-carta">
-          <p class="remetente">De: Bruno Batalha</p>
-          <img src="img/carta.svg" alt="Carta de " />
-        </li>
+      <ul class="lista-cartas">       
       </ul>
 
       <a href="cartas.html" class="btn">
@@ -107,8 +88,18 @@
     <button class="up-arrow-button">
       <div></div>
       <div></div>
-    </button>    
+    </button>
+
     <script src="js/up-arrow-button.js"></script>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

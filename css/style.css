@@ -117,9 +117,10 @@ body {
     text-align: right;
     margin-top: 15px;
 }
-
-.item-carta img{
+.item-carta{
     cursor: pointer;
+}
+.item-carta img{
     transition: transform 200ms, box-shadow 200ms;
 }
 .item-carta:hover img {
