@@ -1,0 +1,29 @@
+
+.up-arrow-button{
+    position: fixed;
+    border: none;
+    cursor: pointer;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #1e2026;
+    border-radius: 4px;
+}
+.up-arrow-button div{
+    width: 7px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50px;
+}
+.up-arrow-button div:nth-child(1){
+    transform: rotate(35deg);
+    margin-right: 4px;
+}
+.up-arrow-button div:nth-child(2){
+    transform: rotate(-35deg);
+    margin-left: 4px;
+}
