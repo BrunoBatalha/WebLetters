@@ -40,9 +40,9 @@
 
 .cartas .lista-cartas {
     list-style: none;
-    display: flex;
+    display: flex;        
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 
 .cartas .lista-cartas .item-carta {
@@ -60,11 +60,10 @@
     max-width: 100%;
 }
 
-.cartas a {
+.cartas .btn {
     display: block;
     text-align: center;
     text-decoration: none;
-    padding-top: 7px;
     margin: 20px auto 0 auto;
 }
 

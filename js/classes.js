@@ -27,11 +27,35 @@ class CartaController {
       .limitToLast(quantidade)
       .once("value");
 
-    snapshot.forEach(function(childSnapshot) {
+    snapshot.forEach(childSnapshot => {
       const { remetente, mensagem } = childSnapshot.val();
       cartas.push(new Carta(remetente, mensagem, childSnapshot.key));
     });
 
     return cartas;
+  }
+
+  async paginar(pagina, quantidadePorPagina) {
+    const cartas = [];
+    const snapshot = await database.ref("cartas").once("value");
+
+    snapshot.forEach(childSnapshot => {
+      const { remetente, mensagem } = childSnapshot.val();
+      cartas.push(new Carta(remetente, mensagem, childSnapshot.key));
+    });
+
+    cartas.reverse();
+
+    const inicio =
+      pagina === 1 ? pagina - 1 : quantidadePorPagina * (pagina - 1);
+    const fim = inicio + quantidadePorPagina;
+
+    const totalItens = snapshot.numChildren();
+    const totalPaginas = totalItens / quantidadePorPagina;
+
+    return {
+      cartas: cartas.slice(inicio, fim),
+      totalPaginas: totalPaginas
+    };
   }
 }
