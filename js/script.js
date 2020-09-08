@@ -74,7 +74,7 @@ class CartasPage {
     this.botaoProximaPagina = document.querySelector("#botaoProximaPagina");
     this.pagina = 1;
     this.totalPaginas = 1;
-    this.quantidadePorPagina = 3;
+    this.quantidadePorPagina = 9;
     this.init();
   }
 
