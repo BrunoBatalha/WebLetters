@@ -1,3 +1,5 @@
+const CARTA_STORAGE = "key_carta";
+
 class Index {
   constructor() {
     this.cartaController = new CartaController();
@@ -5,9 +7,10 @@ class Index {
     this.formEnviaCarta = document.querySelector("#form-envia-carta");
     this.init();
   }
+
   init() {
     this.formEnviaCarta.addEventListener("submit", e => this.handleSubmit(e));
-    this.exibeCartas();
+    this.exibeUltimasCartas();
   }
 
   handleSubmit(e) {
@@ -22,47 +25,69 @@ class Index {
 
     const carta = new Carta(remetente.value, mensagem.value);
     this.cartaController.salvar(carta);
+
     remetente.value = "";
     mensagem.value = "";
-    this.exibeCartas();
+
+    this.exibeUltimasCartas();
   }
 
-  exibeCartas() {
+  exibeUltimasCartas() {
     this.listaCartas.innerHTML = "";
     this.cartaController.listar(6).then(cartas => {
       cartas.reverse();
-      cartas.forEach(carta => this.criaCarta(carta.remetente));
+      cartas.forEach(carta => this.criaCarta(carta.remetente, carta.key));
     });
-    // const a = this.cartaController.listar(6);
-    // console.log(a);
   }
 
-  criaCarta(remetente) {
-    const li = document.createElement("li");
-    const p = document.createElement("p");
-    const a = document.createElement("a");
-    const img = document.createElement("img");
+  criaCarta(remetente, key) {
+    const item = {
+      li: document.createElement("li"),
+      p: document.createElement("p"),
+      a: document.createElement("a"),
+      img: document.createElement("img")
+    };
 
-    li.className = "item-carta";
-    p.className = "remetente";
-    img.src = "img/carta.svg";
-    img.alt = "Carta de " + remetente;
+    item.li.className = "item-carta";
+    item.p.className = "remetente";
+    item.img.src = "img/carta.svg";
+    item.img.alt = "Carta de " + remetente;
 
-    li.appendChild(p);
-    li.appendChild(a);
-    a.appendChild(img);
+    item.li.appendChild(item.p);
+    item.li.appendChild(item.a);
+    item.a.appendChild(item.img);
 
-    p.innerHTML = `De: ${remetente}`;
+    item.li.dataset.key = key;
+    item.li.onclick = () => this.salvaKeyCarta(key);
+    item.a.href = "carta.html";
+    item.p.innerHTML = `De: ${remetente}`;
 
-    this.listaCartas.appendChild(li);
+    this.listaCartas.appendChild(item.li);
+  }
+
+  salvaKeyCarta(key) {
+    sessionStorage.setItem(CARTA_STORAGE, key);
   }
 }
 
-new Index();
+class CartaPage {
+  constructor() {
+    this.cartaController = new CartaController();
+    this.carta = document.querySelector(".carta");
+    this.key = sessionStorage.getItem(CARTA_STORAGE);
+    this.init();
+  }
 
-// <li class="item-carta">
-//   <p class="remetente">De: Bruno Batalha</p>
-//   <a href="carta.html">
-//     <img src="img/carta.svg" alt="Carta de " />{" "}
-//   </a>
-// </li>;
+  async init() {
+    const carta = await this.cartaController.buscar(this.key);
+    this.exibeCarta(carta);
+  }
+
+  exibeCarta(carta) {
+    this.carta.innerHTML = carta.mensagem;
+  }
+}
+
+const path = window.location.pathname;
+if (path === "/index.html") new Index();
+if (path === "/carta.html") new CartaPage();

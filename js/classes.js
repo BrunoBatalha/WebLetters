@@ -1,7 +1,8 @@
 class Carta {
-  constructor(remetente, mensagem) {
+  constructor(remetente, mensagem, key = "") {
     this.remetente = remetente;
     this.mensagem = mensagem;
+    this.key = key;
   }
 }
 
@@ -13,6 +14,12 @@ class CartaController {
       .set({ remetente, mensagem });
   }
 
+  async buscar(key) {
+    const snapshot = await database.ref(`cartas/${key}`).once("value");
+    const { remetente, mensagem } = snapshot.val();
+    return new Carta(remetente, mensagem, snapshot.key);
+  }
+
   async listar(quantidade) {
     const cartas = [];
     const snapshot = await database
@@ -21,8 +28,10 @@ class CartaController {
       .once("value");
 
     snapshot.forEach(function(childSnapshot) {
-      cartas.push(childSnapshot.val());
+      const { remetente, mensagem } = childSnapshot.val();
+      cartas.push(new Carta(remetente, mensagem, childSnapshot.key));
     });
-    return cartas.map(({ remetente, mensagem }) => ({ remetente, mensagem }));
+
+    return cartas;
   }
 }
