@@ -40,13 +40,22 @@
       <h2 class="titulo">Apenas escreva</h2>
       <form id="form-envia-carta" method="POST">
         <label for="remetente">De:</label>
-        <input type="text" name="remetente" autocomplete="off" required />
+        <input
+          type="text"
+          name="remetente"
+          autocomplete="off"
+          placeholder="Violet Evergarden"
+          required
+        />
 
         <label for="mensagem">Mensagem:</label>
         <textarea
           type="text"
           name="mensagem"
           autocomplete="off"
+          placeholder="22 de setembro de 1845
+
+Caro Major Gilbert..."
           required
         ></textarea>
 
@@ -58,8 +67,7 @@
 
     <section class="cartas container">
       <h2 class="titulo">Cartas</h2>
-      <ul class="lista-cartas">       
-      </ul>
+      <ul class="lista-cartas"></ul>
 
       <a href="cartas.html" class="btn">
         Mais
