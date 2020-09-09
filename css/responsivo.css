@@ -54,18 +54,25 @@
     /* Introduções */
     .introducao .titulo-principal {
         font-size: 55px;
+        text-align: center;
+    }
+    .introducao .titulo-principal::after {
+        margin: 0 auto;
     }
     .introducao .descricao {
+        text-align: center;
         font-size: 20px;
         width: 90%;
     }
     /* Introducao inicio */
     .intro-inicio {
         background: var(--azul-1);
-        height: auto;        
+        height: auto;
     }
-    .intro-inicio .descricao{
-        margin-bottom: 100px;
+    .intro-inicio .descricao {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 60px;
     }
     .intro-inicio .quote {
         width: 50%;
