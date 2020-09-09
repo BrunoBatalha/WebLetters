@@ -1,0 +1,98 @@
+.bg-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1110px) {
+    .container {
+        width: 800px;
+    }
+    /* Introducao inicio */
+    .intro-inicio .quote {
+        right: 26%;
+    }
+    /* Lista de cartas index */
+    .cartas .lista-cartas .item-carta {
+        width: 390px;
+    }
+    /* Lista de cartas por página */
+    .cartas-paginas .lista-cartas .item-carta {
+        width: 250px;
+    }
+    .cartas-paginas .lista-cartas .item-carta .remetente {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .container {
+        width: 80%;
+    }
+    /* Introduções */
+    .introducao .titulo-principal {
+        font-size: 70px;
+    }
+    /* Lista de cartas index */
+    .cartas .lista-cartas .item-carta .remetente {
+        font-size: 20px;
+    }
+    .cartas .lista-cartas .item-carta {
+        width: 47%;
+        margin-bottom: 40px;
+    }
+    /* Quotes do footer */
+    .quote-footer blockquote {
+        font-size: 20px;
+        width: 80%;
+    }
+    /* Lista de cartas por página */
+    .cartas-paginas .lista-cartas .item-carta {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    /* Introduções */
+    .introducao .titulo-principal {
+        font-size: 55px;
+    }
+    .introducao .descricao {
+        font-size: 20px;
+        width: 90%;
+    }
+    /* Introducao inicio */
+    .intro-inicio {
+        background: var(--azul-1);
+        height: auto;        
+    }
+    .intro-inicio .descricao{
+        margin-bottom: 100px;
+    }
+    .intro-inicio .quote {
+        width: 50%;
+        right: 5%;
+        bottom: 5px;
+    }
+    .intro-inicio .quote p {
+        font-size: 12px;
+    }
+    .intro-inicio .quote cite {
+        font-size: 14px;
+    }
+    .intro-inicio .bg-mobile {
+        /* position: absolute;
+        bottom: 0; */
+        display: block;
+        width: 50%;
+    }
+    /* Lista de cartas index */
+    .cartas .lista-cartas .item-carta {
+        width: 100%;
+    }
+    /* Lista de cartas por página */
+    .cartas-paginas .lista-cartas .item-carta {
+        width: 100%;
+    }
+    .cartas-paginas .lista-cartas .item-carta .remetente {
+        font-size: 20px;
+    }
+}

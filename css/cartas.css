@@ -1,31 +1,19 @@
 /* Introdução */
 
-.introducao {
+.intro-cartas {
     background: url(../img/bg-cartas.svg) center no-repeat;
     background-size: cover;
-    color: var(--amarelo);
-    height: 500px;
-    position: relative;
 }
 
-.introducao .titulo-principal {
-    font-size: 86px;
-    font-weight: bold;
-    line-height: 80px;
-    padding-top: 90px;
+.intro-cartas .titulo-principal {
     text-align: center;
 }
 
-.introducao .titulo-principal::after {
-    content: "";
-    background: var(--amarelo);
-    display: block;
-    width: 120px;
-    height: 3px;
+.intro-cartas .titulo-principal::after {
     margin: 0 auto;
 }
 
-.introducao .descricao {
+.intro-cartas .descricao {
     font-size: 30px;
     margin-top: 35px;
     width: 435px;
@@ -33,34 +21,34 @@
     margin: 25px auto 0 auto;
 }
 
-.cartas {
+.cartas-paginas {
     margin-top: 100px;
     margin-bottom: 50px;
 }
 
-.cartas .lista-cartas {
+.cartas-paginas .lista-cartas {
     list-style: none;
-    display: flex;        
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
 }
 
-.cartas .lista-cartas .item-carta {
+.cartas-paginas .lista-cartas .item-carta {
     width: 280px;
     margin-bottom: 60px;
 }
 
-.cartas .lista-cartas .item-carta p {
+.cartas-paginas .lista-cartas .item-carta p {
     color: var(--amarelo);
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.cartas .lista-cartas .item-carta img {
+.cartas-paginas .lista-cartas .item-carta img {
     max-width: 100%;
 }
 
-.cartas .btn {
+.cartas-paginas .btn {
     display: block;
     text-align: center;
     text-decoration: none;

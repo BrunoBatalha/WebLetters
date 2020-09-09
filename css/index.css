@@ -1,49 +1,32 @@
 /* Introdução */
 
-.introducao {
+.intro-inicio {
     background: url(../img/bg-introducao.svg) center no-repeat;
     background-size: cover;
-    color: var(--amarelo);
-    height: 500px;
-    position: relative;
 }
 
-.introducao .titulo-principal {
-    font-size: 86px;
-    font-weight: bold;
-    line-height: 80px;
-    padding-top: 90px;
-}
-
-.introducao .titulo-principal::after {
-    content: "";
-    background: var(--amarelo);
-    display: block;
-    width: 120px;
-    height: 3px;
-}
-
-.introducao .descricao {
+.intro-inicio .descricao {
     font-size: 30px;
     margin-top: 35px;
     width: 575px;
 }
 
-.introducao .quote {
+.intro-inicio .quote {
     position: absolute;
     bottom: 25px;
-    right: 490px;
+    /* right: 490px; */
+    right: 35%;
     width: 310px;
 }
 
-.introducao .quote p {
+.intro-inicio .quote p {
     font-size: 16px;
     font-style: italic;
     text-align: right;
     margin-bottom: 10px;
 }
 
-.introducao .quote cite {
+.intro-inicio .quote cite {
     display: block;
     font-size: 18px;
     font-weight: bold;
@@ -80,6 +63,7 @@
 
 .form-carta form input:focus,
 .form-carta form textarea:focus {
+    outline: none;
     box-shadow: inset 0 -4px var(--vermelho);
 }
 
