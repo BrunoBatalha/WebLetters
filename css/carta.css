@@ -1,13 +1,10 @@
 /* Introdução */
 
-.introducao {
+.intro-carta {
     background: url(../img/bg-cartas.svg) center no-repeat;
     background-size: cover;
-    color: var(--amarelo);
-    height: 500px;
-    position: relative;
 }
-.introducao .btn {
+.intro-carta .btn {
     display: block;
     text-align: center;
     text-decoration: none;
@@ -25,6 +22,6 @@
     padding: 80px 25px 80px 25px;
 }
 
-.quote-footer {
+.quote-carta {
     background: url("../img/bg-quote-2.png") no-repeat center;
 }
