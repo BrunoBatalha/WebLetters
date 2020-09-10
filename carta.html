@@ -7,9 +7,9 @@
     <title>Web Letters - Uma carta mil emoções</title>
 
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/up-arrow-button.css" />
-    <link rel="stylesheet" href="css/carta.css" />
-    <link rel="stylesheet" href="css/responsivo.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
   </head>
 
   <body>
@@ -20,19 +20,19 @@
         </a>
       </header>
 
-      <a href="cartas.html" class="btn">
+      <a href="cartas.html" class="btn fadeInDown" data-anime="400" >
         Mais cartas
       </a>
     </div>
 
     <hr class="separador" />
 
-    <section class="carta container"></section>
+    <section class="carta container fadeInDown" data-anime="800"></section>
 
     <hr class="separador container" />
 
     <section class="quote-footer quote-carta">
-      <blockquote class="container">
+      <blockquote class="container fadeInUp" data-anime="1200">
         <p>
           "Quebrar a confiança de alguém é como amassar um pedaço perfeito de
           papel. Você pode alisá-lo de novo mas ele nunca voltará a ser igual."

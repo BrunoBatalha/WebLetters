@@ -8,7 +8,9 @@
     <link rel="shortcut icon" href="img/carta.svg" />
     <link rel="stylesheet" href="css/style.css" />
 
-
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
   <body>
     <div class="introducao intro-inicio">
       <header class="header">
@@ -19,8 +21,8 @@
 
       <section>
         <div class="container">
-          <h1 class="titulo-principal">Web Letters</h1>
-          <p class="descricao">
+          <h1 class="titulo-principal fadeInDown" data-anime="400">Web Letters</h1>
+          <p class="descricao fadeInDown" data-anime="800">
             Faça de sua carta uma verdadeira experiência...
           </p>
           <img
@@ -28,7 +30,7 @@
             alt="Violet Evergarden"
             class="bg-mobile"
           />
-          <blockquote class="quote">
+          <blockquote class="quote fadeInRight" data-anime="1200">
             <p>
               "Ainda que não possa vê-lo ou tocá-lo, é como se estivesse ao meu
               lado."
@@ -41,7 +43,7 @@
 
     <hr class="separador" />
 
-    <section class="form-carta container">
+    <section class="form-carta container fadeInDown" data-anime="1400">
       <h2 class="titulo">Apenas escreva</h2>
       <form id="form-envia-carta" method="POST">
         <label for="remetente">De:</label>
@@ -70,7 +72,7 @@ Caro Major Gilbert..."
 
     <hr class="separador container" />
 
-    <section class="cartas container">
+    <section class="cartas container fadeInDown" data-anime="1400">
       <h2 class="titulo">Cartas</h2>
       <ul class="lista-cartas"></ul>
 
@@ -82,7 +84,7 @@ Caro Major Gilbert..."
     <hr class="separador container" />
 
     <section class="quote-footer">
-      <blockquote class="container">
+      <blockquote class="container fadeInUp" data-anime="1600">
         <p>
           "Nem todos conseguem expressar oque realmente sentem. As pessoas
           acabam se contradizendo ou mentindo, o que dificulta muito pra eu

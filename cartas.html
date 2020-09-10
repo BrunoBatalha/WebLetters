@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Web Letters - Uma carta mil emoções</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/up-arrow-button.css" />
-    <link rel="stylesheet" href="css/cartas.css" />
-    <link rel="stylesheet" href="css/responsivo.css" />
+    <link rel="stylesheet" href="css/style.css" /> 
+    <script>
+      document.documentElement.classList.add("js");
+    </script>  
   </head>
 
   <body>
@@ -22,8 +22,8 @@
 
       <section>
         <div class="container">
-          <h1 class="titulo-principal">Cartas</h1>
-          <p class="descricao">
+          <h1 class="titulo-principal fadeInDown" data-anime="400">Cartas</h1>
+          <p class="descricao fadeInDown" data-anime="800">
             Uma carta pode ser mais do que simples frases...
           </p>
         </div>
@@ -32,7 +32,7 @@
 
     <hr class="separador" />
 
-    <section class="cartas-paginas container">
+    <section class="cartas-paginas container fadeInDown" data-anime="1200">
       <ul class="lista-cartas"></ul>
       <button class="btn" id="botaoProximaPagina">
         Mais
@@ -42,7 +42,7 @@
     <hr class="separador container" />
 
     <section class="quote-footer quote-cartas">
-      <blockquote class="container">
+      <blockquote class="container fadeInUp" data-anime="1200">
         <p>
           "Quebrar a confiança de alguém é como amassar um pedaço perfeito de
           papel. Você pode alisá-lo de novo mas ele nunca voltará a ser igual."
