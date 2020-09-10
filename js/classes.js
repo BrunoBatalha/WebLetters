@@ -1,3 +1,6 @@
+firebase.analytics();
+const database = firebase.database();
+
 class Carta {
   constructor(remetente, mensagem, key = "") {
     this.remetente = remetente;
