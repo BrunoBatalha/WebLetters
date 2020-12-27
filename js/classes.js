@@ -12,7 +12,7 @@ class Carta {
 class CartaController {
   salvar({ remetente, mensagem }) {
     database.ref("cartas_analise").push().set({ remetente, mensagem });
-    alert("Sua mensagem avaliada e postada, obrigado!");
+    alert("Sua mensagem será avaliada e postada, obrigado!");
   }
 
   async buscar(key) {
