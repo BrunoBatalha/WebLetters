@@ -11,10 +11,8 @@ class Carta {
 
 class CartaController {
   salvar({ remetente, mensagem }) {
-    database
-      .ref("cartas")
-      .push()
-      .set({ remetente, mensagem });
+    database.ref("cartas_analise").push().set({ remetente, mensagem });
+    alert("Sua mensagem avaliada e postada, obrigado!");
   }
 
   async buscar(key) {
@@ -30,7 +28,7 @@ class CartaController {
       .limitToLast(quantidade)
       .once("value");
 
-    snapshot.forEach(childSnapshot => {
+    snapshot.forEach((childSnapshot) => {
       const { remetente, mensagem } = childSnapshot.val();
       cartas.push(new Carta(remetente, mensagem, childSnapshot.key));
     });
@@ -42,7 +40,7 @@ class CartaController {
     const cartas = [];
     const snapshot = await database.ref("cartas").once("value");
 
-    snapshot.forEach(childSnapshot => {
+    snapshot.forEach((childSnapshot) => {
       const { remetente, mensagem } = childSnapshot.val();
       cartas.push(new Carta(remetente, mensagem, childSnapshot.key));
     });
@@ -58,7 +56,7 @@ class CartaController {
 
     return {
       cartas: cartas.slice(inicio, fim),
-      totalPaginas: totalPaginas
+      totalPaginas: totalPaginas,
     };
   }
 }
